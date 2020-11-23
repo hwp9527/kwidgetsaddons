@@ -142,6 +142,12 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type,
     // Button box, will be set up by setButtons()
     d->m_buttonBox = new QDialogButtonBox(this);
     d->m_topLayout->addWidget(d->m_buttonBox);
+
+    // The user could close the dialog without using any buttons in the
+    // button box (e.g. by pressing Esc)
+    connect(this, &QDialog::rejected, this, [this]() {
+        done(QDialogButtonBox::Cancel);
+    });
 }
 
 // This method has been copied from KWindowSystem to avoid depending on it
