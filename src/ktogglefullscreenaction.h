@@ -17,6 +17,7 @@
 #define KTOGGLEFULLSCREENACTION_H
 
 #include <ktoggleaction.h>
+#include <QWidget>
 
 /**
  * @class KToggleFullScreenAction ktogglefullscreenaction.h KToggleFullScreenAction

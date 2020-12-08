@@ -9,6 +9,7 @@
 #define KTOOLBARSPACERACTION_H
 
 #include <QWidgetAction>
+#include <QWidget>
 
 #include <kwidgetsaddons_export.h>
 
